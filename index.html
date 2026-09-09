@@ -193,7 +193,8 @@
 
   /* pricing */
   .plans{display:grid;grid-template-columns:1fr;gap:2rem;margin-top:3rem;}
-  @media(min-width:840px){.plans{grid-template-columns:repeat(2,1fr);gap:2.4rem;}}
+  @media(min-width:720px){.plans{grid-template-columns:repeat(2,1fr);gap:2rem;}}
+  @media(min-width:1100px){.plans{grid-template-columns:repeat(3,1fr);gap:2.2rem;}}
   .plan{background:#FCFAF4;border:1px solid var(--line);display:flex;flex-direction:column;overflow:hidden;min-width:0;box-shadow:0 6px 24px rgba(18,51,46,.06);transition:transform .3s ease, box-shadow .3s ease;}
   .plan:hover{transform:translateY(-3px);box-shadow:0 10px 32px rgba(18,51,46,.1);}
   .plan-media{overflow:hidden;height:260px;position:relative;flex:none;}
@@ -210,6 +211,7 @@
   .plan.feature .price{color:var(--cream);border-color:rgba(246,241,231,.22);}
   .plans-cta{text-align:center;margin-top:3rem;}
   .plans-cta .offer{font-style:italic;font-size:1.15rem;margin-bottom:1.4rem;color:var(--ink-soft);}
+  .plans-cta .offer-note{display:block;font-style:normal;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;font-weight:600;color:var(--olive);margin-top:.7rem;}
 
   /* qualification */
   .fit-hero{max-width:1100px;}
@@ -306,20 +308,18 @@
     <nav class="nav-links" aria-label="Primary">
       <a href="#method">The Method</a>
       <a href="#plans">Plans</a>
-      <a href="#story">Our Story</a>
     </nav>
     <a class="brand" href="#top" aria-label="Meridian">
       <img src="https://cdn.katalyst-crm.com/t1/meridian%20logo.png" alt="Meridian">
     </a>
-    <div class="nav-cta"><a class="btn light" href="#offer">Start free</a></div>
+    <div class="nav-cta"><a class="btn light" href="#plans">Get 30% off</a></div>
   </div>
 </header>
 <div class="mobile-menu" id="mobileMenu">
   <a href="#method">The Method</a>
   <a href="#plans">Plans</a>
   <a href="#fit">Is this for you?</a>
-  <a href="#story">Our Story</a>
-  <a class="btn light" href="#offer">Start free</a>
+  <a class="btn light" href="#plans">Get 30% off</a>
 </div>
 
 <!-- ══ SECTION 1 · HERO ══ -->
@@ -334,7 +334,7 @@
     <h1>You got into real estate for the <em>people</em>, not the passwords.</h1>
     <p class="sub">Meridian puts your listings, marketing, deals, and documents in one place, so the busywork runs in the background and your day belongs to your clients.</p>
     <div class="btn-row">
-      <a class="btn light-solid" href="#offer">Start free, your first month is on us</a>
+      <a class="btn light-solid" href="#plans">Get 30% off your first year</a>
       <a class="btn light" href="#method">See Meridian in action</a>
     </div>
     <div class="note">
@@ -534,15 +534,6 @@
     </div>
     <div class="plans">
       <div class="plan">
-        <div class="plan-media"><img src="https://d8j0ntlcm91z4.cloudfront.net/user_35NBuSfIPglHIOMZxxqoxDRFcyj/hf_20260820_212704_a9ee539d-edf7-41e8-8c53-6cfdf8b29a2d.png" alt="A single broker working confidently at a bright modern desk"></div>
-        <div class="plan-body">
-          <h3>Solo</h3>
-          <p class="for">For the agent done with juggling.</p>
-          <p>Feel in control by the end of week one. Your marketing, listings, and deals finally share a screen. You get a published site, a business line, and a deal pipeline that runs itself.</p>
-          <p class="price">From $158 per seat, per month.</p>
-        </div>
-      </div>
-      <div class="plan">
         <div class="plan-media"><img src="https://d8j0ntlcm91z4.cloudfront.net/user_35NBuSfIPglHIOMZxxqoxDRFcyj/hf_20260824_144453_e5cc00c5-8550-494b-abb8-c8981cdb3fbe.png" alt="Experienced real estate team of professionals in their 30s and 40s collaborating in a bright office"></div>
         <div class="plan-body">
           <h3>Team</h3>
@@ -571,8 +562,8 @@
       </div>
     </div>
     <div class="plans-cta">
-      <p class="offer">With limited time offer, every plan starts with your first month free.</p>
-      <a class="btn solid" href="#offer">Start your free month</a>
+      <p class="offer">Limited time offer: 30% off an annual subscription in your first year, setup fee excluded. <span class="offer-note">Ending time may change without notice.</span></p>
+      <a class="btn solid" href="#">Claim 30% off your first year</a>
     </div>
     <div class="note">
       <b>Status</b> PRICING PROVISIONAL
@@ -634,7 +625,7 @@
   <div class="wrap wrap-wide">
     <div class="intro-copy fit-hero">
       <p class="eyebrow center">Is This For You?</p>
-      <h2>Built for working agents. Not for everyone.</h2>
+      <h2>Built for working brokerages. Not for everyone.</h2>
     </div>
     <div class="qual">
       <details class="qual-block" open>
@@ -643,7 +634,7 @@
           <span class="plus">+</span>
         </summary>
         <ul>
-          <li>You hold an active real estate license and closed at least one deal in the last year.</li>
+          <li>You hold an active brokerage license and want to expand your team.</li>
           <li>Your business currently lives in three or more separate systems.</li>
           <li>You run a small team and nobody can see the whole pipeline at once.</li>
           <li>You are paying for tools you open twice a month.</li>
@@ -667,10 +658,6 @@
         <div class="answer">It is the subscription that retires the pile. Add up what the separate tools cost you per month, then compare one bill. The stack is the expensive option. <span class="tag">Price</span></div>
       </details>
       <details>
-        <summary>You are new. Why should I trust my business to you? <span class="plus">+</span></summary>
-        <div class="answer">Fair. So do not pay to find out. The first month is free, the engineering behind it has twenty years of history in industries that do not tolerate mistakes, and your payments run through Stripe, not through us. <span class="tag">Trust</span></div>
-      </details>
-      <details>
         <summary>I am a solo agent, is this too much system for me? <span class="plus">+</span></summary>
         <div class="answer">Solo is the smallest plan for a reason. One seat, everything included, nothing you have to grow into before it is useful. <span class="tag">Fit</span></div>
       </details>
@@ -688,8 +675,8 @@
   </div>
 </section>
 
-<!-- ══ SECTION 10 · BUILT BY ══ -->
-<section class="section panel-tan" id="story">
+<!-- ══ SECTION 10 · BUILT BY (temporarily hidden — will be revised with more team members) ══ -->
+<section class="section panel-tan" id="story" style="display:none;">
   <div class="wrap">
     <div class="split reverse">
       <div class="prose">
@@ -764,8 +751,8 @@
   </div>
 </section>
 
-<!-- ══ SECTION 12 · FREE OFFER ══ -->
-<section class="section" id="offer">
+<!-- ══ SECTION 12 · FREE OFFER (temporarily hidden — will be re-enabled for future promotion) ══ -->
+<section class="section" id="offer" style="display:none;">
   <div class="wrap">
     <div class="split">
       <div class="split-media">
@@ -796,14 +783,14 @@
   <div class="wrap">
     <div class="ornament"><svg viewBox="0 0 34 46" style="stroke:var(--tan-soft);"><line x1="17" y1="2" x2="17" y2="44"/><circle cx="17" cy="23" r="8"/><line x1="9" y1="23" x2="25" y2="23" opacity=".5"/></svg></div>
     <h2>Stop being the login manager. Go back to being the agent.</h2>
-    <p class="sub">One workspace, set up the way you always wanted,  first month free. The busywork goes quiet and the day is yours again.</p>
+    <p class="sub">One workspace, set up the way you always wanted, with 30% off your first year. The busywork goes quiet and the day is yours again.</p>
     <ul>
       <li>One login instead of five.</li>
       <li>Deals that move without the chasing.</li>
       <li>Evenings that are yours again.</li>
     </ul>
     <div class="btn-row">
-      <a class="btn light-solid" href="#offer">Get your evenings back, start free</a>
+      <a class="btn light-solid" href="#plans">Get 30% off your first year</a>
       <a class="btn light" href="#">Book a demo</a>
     </div>
     <div class="note" style="text-align:left;max-width:720px;margin-inline:auto;">
@@ -841,7 +828,7 @@
       </div>
       <div class="foot-col">
         <h4>Get started</h4>
-        <a href="#offer">Start free</a>
+        <a href="#plans">Get 30% off</a>
         <a href="#">Sign in</a>
       </div>
       <div class="foot-col">
